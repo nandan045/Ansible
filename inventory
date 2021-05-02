@@ -4,5 +4,5 @@ server1@10.0.2.13
 [db_servers]
 server2@10.0.2.12 
 
-[file_servers]
-server3@10.0.2.14 
+# [file_servers]
+# server3@10.0.2.14 

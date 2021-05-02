@@ -5,7 +5,7 @@
   pre_tasks:
  
   - name: install updates ubuntu
-    tags: always
+    tags: update
     apt:
       update_cache: yes
     when: ansible_distribution == 'Ubuntu'
@@ -28,6 +28,16 @@
           - apache2
           - libapache2-mod-php
        state: latest
+    when: ansible_distribution == 'Ubuntu'
+
+  - name: copy files to web servers
+    tags: copy, apache, ubuntu
+    copy:
+      src: default_site.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 0644
     when: ansible_distribution == 'Ubuntu'
 
   - name: install apache and php for CentOS
