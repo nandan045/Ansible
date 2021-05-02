@@ -1,3 +1,8 @@
+[web_servers]
 server1@10.0.2.13
-server2@10.0.2.12
-server3@10.0.2.14
+
+[db_servers]
+server2@10.0.2.12 
+
+[file_servers]
+server3@10.0.2.14 
