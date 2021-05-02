@@ -6,3 +6,6 @@ server2@10.0.2.12
 
 # [file_servers]
 # server3@10.0.2.14 
+[workstations]
+ansible@10.0.2.11
+
